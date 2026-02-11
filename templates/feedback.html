@@ -17,7 +17,11 @@
     <h2 class="incorrect">✗ Not quite...</h2>
     <p>{{ feedback }}</p>
     <p style="margin-top: 15px;">
-        <strong>The correct answer was:</strong> {{ frame.answer }}
+        {% if attempts >= 3 %}
+<p style="margin-top: 15px;">
+    <strong>The correct answer was:</strong> {{ frame.answer[0] }}
+</p>
+{% endif %}
     </p>
 </div>
 
@@ -32,7 +36,11 @@
 -->
 
 <!-- Option A: Advance anyway (current behavior) -->
-<a href="{{ url_for('show_frame') }}" class="button">Continue to Next Frame →</a>
+{% if attempts < 3 %}
+<a href="{{ url_for('show_frame') }}" class="button">Try Again</a>
+{% else %}
+<a href="{{ url_for('show_frame') }}" class="button">Next Frame →</a>
+{% endif %}
 
 <!-- Option B: Retry same frame (uncomment to use)
 <p style="margin-top: 15px;">

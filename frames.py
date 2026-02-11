@@ -21,8 +21,8 @@ FRAME STRUCTURE OPTIONS:
 
 OPTION A - Minimal:
 frame = {
-    "prompt": "The capital of France is _____.",
-    "answer": "paris"
+    "prompt": "You need ____ and _____ to craft a compass",
+    "answer": "iron, iron ingot, redstone"
 }
 
 OPTION B - With feedback (RECOMMENDED):
@@ -54,71 +54,47 @@ Choose a structure and be CONSISTENT across all your frames!
 # =============================================================================
 
 FRAMES = [
-    # Frame 1: Introduction
     {
-        "prompt": "In Python, we store data in _____. (Hint: they can vary!)",
-        "answer": "variables",
-        "feedback_correct": "Correct! Variables are containers for storing data.",
-        "feedback_incorrect": "Not quite. We store data in variables."
+        "prompt": "To craft a compass you need _____ and ________.",
+        "answer": ["iron ingot and redstone", "redstone and iron ingot"],
+        "feedback_correct": "Correct! You need iron ingots and redstone!",
+        "feedback_incorrect": "Not quite. You can find both of them in a cave"
     },
     
     # Frame 2: Assignment operator
-    {
-        "prompt": "To assign a value to a variable, we use the _____ sign.",
-        "answer": "=",
-        "feedback_correct": "Yes! The = sign is the assignment operator.",
-        "feedback_incorrect": "Not quite. We use the = (equals) sign."
-    },
+ {
+    "prompt": "You need ___ iron ingots",
+    "answer": ["4", "four", "Four", "FOUR"],
+    "feedback_correct": "Yes! You need four iron ingots!",
+    "feedback_too_high": "Not quite, you don't need that many.",
+    "feedback_too_low": "Not quite, you need a few more."
+},
     
     # Frame 3: Simple assignment
     {
-        "prompt": "To store the number 5 in a variable called x, we write: x _____ 5",
-        "answer": "=",
-        "feedback_correct": "Correct! x = 5 assigns the value 5 to x.",
-        "feedback_incorrect": "Remember, we use = for assignment. So: x = 5"
+        "prompt": "To make the iron ingots you ______ the iron",
+        "answer": ["smelt", "Smelt", "SMELT"],
+        "feedback_correct": "Correct! You have to smelt the iron!",
+        "feedback_incorrect": "You have to use a furnace to do this!"
     },
     
     # Frame 4: String variables
     {
-        "prompt": "Text data in Python is called a _____.",
-        "answer": "string",
-        "feedback_correct": "Yes! Strings are sequences of characters (text).",
-        "feedback_incorrect": "Text data is called a string."
+        "prompt": "To make a compass you need a ______ table",
+        "answer": ["crafting", "Crafting", "CRAFTING"],
+        "feedback_correct": "Yes! You need a crafting table!",
+        "feedback_incorrect": "What's another word for make, or create?"
     },
     
     # Frame 5: String syntax
     {
-        "prompt": "Strings must be surrounded by _____ or double quotes.",
-        "answer": "single",
-        "feedback_correct": "Correct! Both 'hello' and \"hello\" are valid strings.",
-        "feedback_incorrect": "Strings use single quotes or double quotes: 'hello' or \"hello\""
+        "prompt": "The ____ goes in the center spot of the crafting table",
+        "answer": ["redstone", "REDSTONE"],
+        "feedback_correct": "Correct!",
+        "feedback_incorrect": "You need the other maerial"
     },
     
-    # Frame 6: Naming conventions
-    {
-        "prompt": "Variable names in Python cannot start with a _____.",
-        "answer": "number",
-        "feedback_correct": "Right! Variables can't start with numbers. 'var1' is ok, '1var' is not.",
-        "feedback_incorrect": "Variable names cannot start with a number."
-    },
-    
-    # Frame 7: Case sensitivity
-    {
-        "prompt": "In Python, 'Name' and 'name' are _____ variables. (same/different)",
-        "answer": "different",
-        "feedback_correct": "Correct! Python is case-sensitive.",
-        "feedback_incorrect": "Python is case-sensitive, so Name and name are different."
-    },
-    
-    # Frame 8: Print function
-    {
-        "prompt": "To display a variable's value, we use the _____ function.",
-        "answer": "print",
-        "feedback_correct": "Yes! print(x) displays the value of x.",
-        "feedback_incorrect": "We use the print() function to display values."
-    },
 ]
-
 
 # =============================================================================
 # TIPS FOR WRITING GOOD FRAMES:

@@ -55,46 +55,36 @@ def show_frame():
         total=len(FRAMES)
     )
 
-
 @app.route("/submit", methods=["POST"])
 def submit_answer():
-    """
-    Process the student's answer:
-    - Compare to correct answer (case-insensitive, stripped)
-    - Update score and progress if correct
-    - Display appropriate feedback
-    """
     frame_idx = session.get("current_frame", 0)
     frame = FRAMES[frame_idx]
-    
-    # Get and normalize the user's answer
+
     user_answer = request.form.get("answer", "").strip().lower()
-    
-    # Get and normalize the correct answer
-    # TODO: If you implement multiple acceptable answers, modify this logic
-    correct_answer = frame["answer"].strip().lower()
-    
-    # Check if correct
-    is_correct = (user_answer == correct_answer)
-    
+    correct_answers = [a.lower() for a in frame["answer"]]
+
+    # Track attempts
+    attempts = session.get("attempts", 0)
+
+    is_correct = user_answer in correct_answers
+
     if is_correct:
-        # Update score and advance to next frame
         session["score"] = session.get("score", 0) + 1
         session["current_frame"] = frame_idx + 1
-    
-    # Get feedback message (with fallback defaults)
-    if is_correct:
-        feedback = frame.get("feedback_correct", "Correct! Well done.")
+        session["attempts"] = 0  # reset attempts
+        feedback = frame.get("feedback_correct", "Correct!")
     else:
-        feedback = frame.get("feedback_incorrect", "Not quite. Try again!")
-    
+        attempts += 1
+        session["attempts"] = attempts
+        feedback = frame.get("feedback_incorrect", "Not quite.")
+
     return render_template(
         "feedback.html",
         is_correct=is_correct,
         feedback=feedback,
-        frame=frame
+        frame=frame,
+        attempts=attempts
     )
-
 
 @app.route("/complete")
 def complete():
