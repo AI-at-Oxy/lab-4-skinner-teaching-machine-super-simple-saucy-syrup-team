@@ -56,25 +56,25 @@ Choose a structure and be CONSISTENT across all your frames!
 FRAMES = [
     # Frame 1: Introduction
     {
-        "prompt": "In Python, we store data in _____. (Hint: they can vary!)",
-        "answer": "variables",
-        "feedback_correct": "Correct! Variables are containers for storing data.",
-        "feedback_incorrect": "Not quite. We store data in variables."
+        "prompt": "In Minecraft, we need _____ and _____ to make a compass.",
+        "answers": ["iron ingots", "redstone dust"],
+        "feedback_correct": "Correct! You need iron ingots and redstone dust.",
+        "feedback_incorrect": "Not quite. You can find both of these ingredients in a cave."
     },
     
     # Frame 2: Assignment operator
     {
-        "prompt": "To assign a value to a variable, we use the _____ sign.",
-        "answer": "=",
-        "feedback_correct": "Yes! The = sign is the assignment operator.",
-        "feedback_incorrect": "Not quite. We use the = (equals) sign."
+        "prompt": "You need ___ iron ingots.",
+        "answer": "4",
+        "feedback_correct": "Yes! You need 4 iron ingots.",
+        "feedback_incorrect": "Not quite. How many sides are in a square?"
     },
     
     # Frame 3: Simple assignment
     {
-        "prompt": "To store the number 5 in a variable called x, we write: x _____ 5",
-        "answer": "=",
-        "feedback_correct": "Correct! x = 5 assigns the value 5 to x.",
+        "prompt": "To make iron ingots, you ___ the iron ore",
+        "answer": "smelt",
+        "feedback_correct": "Correct! You use a ",
         "feedback_incorrect": "Remember, we use = for assignment. So: x = 5"
     },
     
