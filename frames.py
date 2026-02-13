@@ -74,7 +74,7 @@ FRAMES = [
     # Frame 2: Number of Iron Ingots
     {
         "prompt": "Let's talk numbers ... You need _____ iron ingots.",
-        "answers": "4",
+        "answers": ["4", "four", "Four", "FOUR", "IV"], # never forget roman numerals
         "hint": "It is an even number ...",
         "feedback_correct": "Yes! You need 4 iron ingots.",
         "feedback_incorrect": "Not quite. You need 4 iron ingots to make a compass."
