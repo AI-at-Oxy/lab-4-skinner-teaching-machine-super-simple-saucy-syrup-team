@@ -110,7 +110,7 @@ FRAMES = [
     # Frame 6: Placement of Redstone Dust
     {
         "prompt": "The _____ goes in the center of the iron ingots",
-        "answer": "redstone dust",
+        "answers": ["redstone dust", "Redstone dust", "Redstone Dust", "REDSTONE DUST", "red stone dust", "Red Stone Dust", "RED STONE DUST", "redstone", "Redstone", "REDSTONE", "red stone", "Red stone", "Red Stone", "RED STONE"],
         "hint": "Remember, the ingredients used to craft a compass are iron ingots and a type of dust ...",
         "feedback_correct": "Correct! The redstone dust goes in the middle of the iron ingots.",
         "feedback_incorrect": "Not quite, the redstone dust goes in the middle of the iron ingots."
@@ -119,7 +119,7 @@ FRAMES = [
     # Frame 7: + Shape
     {
         "prompt": "The 4 iron ingots are arranged in a ____ shape around the redstone dust",
-        "answers": ["+", "plus", "cross"],
+        "answers": ["+", "plus", "Plus", "PLUS", "cross", "Cross", "CROSS"],
         "hint": "To add, you use the _____ sign (also known as a cross)...",
         "feedback_correct": "Correct! The iron ingots evenly surround the redstone dust on all four sides",
         "feedback_incorrect": "Not quite, the iron ingots should be placed in the middle-top, middle-bottom, middle-left, and middle-right slots (forming a + shape)"
@@ -128,7 +128,7 @@ FRAMES = [
     # Frame 8: Collection
     {
         "prompt": "To collect, you _____ the compass from the result slot to your inventory.",
-        "answer": "drag",
+        "answers": ["drag", "Drag", "DRAG"],
         "hint": "If you click and hold down your mouse while moving it, you do what? ...",
         "feedback_correct": "Yes! You drag the compass into your inventory. Now you can use your newly crafted compass!",
         "feedback_incorrect": "Not quite, you drag the compass into your inventory. Now you can use your newly crafted compass!"
