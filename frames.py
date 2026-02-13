@@ -119,7 +119,7 @@ FRAMES = [
     {
         "prompt": "The 4 iron ingots are arranged in a ____ shape around the redstone dust",
         "answer": "+",
-        "hint": "To add, you use the _____ sign ...",
+        "hint": "To add, you use the _____ sign (also known as a cross)...",
         "feedback_correct": "Correct! The iron ingots evenly surround the redstone dust on all four sides",
         "feedback_incorrect": "Not quite, the iron ingots should be placed in the middle-top, middle-bottom, middle-left, and middle-right slots (forming a + shape)"
     },
