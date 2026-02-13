@@ -54,26 +54,27 @@ Choose a structure and be CONSISTENT across all your frames!
 # =============================================================================
 
 FRAMES = [
-    # Frame 1: Ingredients #FIXME make it so that you can fill in two blanks or only one answer works for one and two
+    # Frame 1: Ingredients: Iron
     {
-        "prompt": "In Minecraft, we need two ingredients to craft a compass. The first is _____.",
-        "answers": ["iron ingots", "redstone dust"],
-        "hint": "You can find either ingredient in a cave ...",
-        "feedback_correct": "Correct! You need iron ingots.",
-        "feedback_incorrect": "Not quite. You can find both of these ingredients in a cave."
+        "prompt": "In Minecraft, we need two ingredients to craft a compass. One is _____ ingots.",
+        "answers": ["iron", "Iron", "IRON"],
+        "hint": "This is one of the most common metals on Earth!",
+        "feedback_correct": "Correct! You need iron ingots and one more ingredient.",
+        "feedback_incorrect": "Not quite. You need iron ingots and one more ingredient."
     },
-    # Frame 1.5: Ingredients 2
+    # Frame 1.5: Ingredients: Redstone
     {
-        "prompt": "The second ingredient is _____.",
-        "answers": ["iron ingots", "redstone dust"],
+        "prompt": "The second ingredient is _____ dust.",
+        "answers": ["redstone", "Redstone", "REDSTONE", "red stone", "Red stone", "Red Stone", "RED STONE"],
+        "hint": "it's red ...",
         "feedback_correct": "Correct! You need iron ingots and redstone dust.",
-        "feedback_incorrect": "Not quite. You can find both of these ingredients in a cave."
+        "feedback_incorrect": "Not quite. You need iron ingots and redstone dust"
     },
     
     # Frame 2: Number of Iron Ingots
     {
-        "prompt": "You need _____ iron ingots.",
-        "answer": "4",
+        "prompt": "Let's talk numbers ... You need _____ iron ingots.",
+        "answers": "4",
         "hint": "It is an even number ...",
         "feedback_correct": "Yes! You need 4 iron ingots.",
         "feedback_incorrect": "Not quite. You need 4 iron ingots to make a compass."
