@@ -68,11 +68,11 @@ def submit_answer():
     frame = FRAMES[frame_idx]
     
     # Get and normalize the user's answer
-    user_answer = request.form.get("answer", "").strip().lower()
+    user_answer = request.form.get("answers", "").strip().lower()
     
     # Get and normalize the correct answer
     # TODO: If you implement multiple acceptable answers, modify this logic
-    correct_answer = frame["answer"].strip().lower()
+    correct_answer = frame["answers"].strip().lower()
     
     # Check if correct
     is_correct = (user_answer == correct_answer)
