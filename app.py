@@ -74,8 +74,9 @@ def submit_answer():
     # TODO: If you implement multiple acceptable answers, modify this logic
     correct_answer = frame["answers"]
     
+    
     # Check if correct
-    is_correct = (user_answer == correct_answer)
+    is_correct = user_answer in correct_answer
     
     if is_correct:
         # Update score and advance to next frame
