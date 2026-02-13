@@ -86,7 +86,7 @@ FRAMES = [
         "answers": ["smelt", "Smelt", "SMELT"],
         "hint": "This is the process of extracting a metal from its ore by melting it ... it is also the past tense of 'smell'",
         "feedback_correct": "Correct! You use a furnace to smelt iron ore.",
-        "feedback_incorrect": "Not quite. You use a furnace to smelt iron ore."
+        "feedback_incorrect": "Not quite. You use a furnace to smelt iron ore. Think of the word 'melt' with an 's' in the front!"
     },
     
     # Frame 4: Crafting Table
@@ -95,7 +95,7 @@ FRAMES = [
         "answers": ["crafting", "Crafting", "CRAFTING"],
         "hint": "Another word for building is ... (its also one of the words in Minecraft!)",
         "feedback_correct": "Yes! A crafting table helps to make many items in Minecraft",
-        "feedback_incorrect": "Not quite, A crafting table helps to make many items in Minecraft."
+        "feedback_incorrect": "Not quite, a crafting table helps to make many items in Minecraft. That's what the 'craft' in Minecraft is for!"
     },
     
     # Frame 5: 3x3 Grid
@@ -127,7 +127,7 @@ FRAMES = [
     
     # Frame 8: Collection
     {
-        "prompt": "To collect, you _____ the compass from the result slot to your inventory.",
+        "prompt": "To collect, you click and _____ the compass from the result slot to your inventory.",
         "answers": ["drag", "Drag", "DRAG"],
         "hint": "If you click and hold down your mouse while moving it, you do what? ...",
         "feedback_correct": "Yes! You drag the compass into your inventory. Now you can use your newly crafted compass!",
