@@ -83,7 +83,7 @@ FRAMES = [
     # Frame 3: Smelting
     {
         "prompt": "To make iron ingots, you _____ the iron ore",
-        "answer": "smelt",
+        "answers": ["smelt", "Smelt", "SMELT"],
         "hint": "This is the process of extracting a metal from its ore by melting it ... it is also the past tense of 'smell'",
         "feedback_correct": "Correct! You use a furnace to smelt iron ore.",
         "feedback_incorrect": "Not quite. You use a furnace to smelt iron ore."
