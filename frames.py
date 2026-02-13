@@ -56,7 +56,7 @@ Choose a structure and be CONSISTENT across all your frames!
 FRAMES = [
     # Frame 1: Ingredients #FIXME make it so that you can fill in two blanks or only one answer works for one and two
     {
-        "prompt": "In Minecraft, we need two ingredients to make a compass. The first is _____.",
+        "prompt": "In Minecraft, we need two ingredients to craft a compass. The first is _____.",
         "answers": ["iron ingots", "redstone dust"],
         "hint": "You can find either ingredient in a cave ...",
         "feedback_correct": "Correct! You need iron ingots.",
@@ -69,73 +69,68 @@ FRAMES = [
         "feedback_correct": "Correct! You need iron ingots and redstone dust.",
         "feedback_incorrect": "Not quite. You can find both of these ingredients in a cave."
     },
-
-    """
-    frame = {
-    "prompt": "What keyword defines a function in Python?",
-    "answer": "def",
-    "answers": ["def"],  # List for multiple acceptable answers
-    "hint": "It's a 3-letter word.",
-    "feedback_correct": "Yes! 'def' is used to define functions.",
-    "feedback_incorrect": "Not quite. We use 'def' to define functions.",
-    "topic": "python-functions"
-    }
-    """
     
     # Frame 2: Number of Iron Ingots
     {
         "prompt": "You need _____ iron ingots.",
         "answer": "4",
+        "hint": "It is an even number ...",
         "feedback_correct": "Yes! You need 4 iron ingots.",
-        "feedback_incorrect": "Not quite. How many sides are in a square?"
+        "feedback_incorrect": "Not quite. You need 4 iron ingots to make a compass."
     },
     
     # Frame 3: Smelting
     {
         "prompt": "To make iron ingots, you _____ the iron ore",
         "answer": "smelt",
+        "hint": "This is the process of extracting a metal from its ore by melting it ... it is also the past tense of 'smell'",
         "feedback_correct": "Correct! You use a furnace to smelt iron ore.",
-        "feedback_incorrect": "Not quite. How do change solid iron into liquid to reshape it?"
+        "feedback_incorrect": "Not quite. You use a furnace to smelt iron ore."
     },
     
     # Frame 4: Crafting Table
     {
-        "prompt": "To build a compass you use a ___ table",
+        "prompt": "To build a compass you use a _____ table",
         "answer": "crafting",
+        "hint": "Another word for building is ... (its also in the name Minecraft!)",
         "feedback_correct": "Yes! A crafting table helps to make many items in Minecraft",
-        "feedback_incorrect": "Not quite, another word for building is crafting ..."
+        "feedback_incorrect": "Not quite, A crafting table helps to make many items in Minecraft."
     },
     
     # Frame 5: 3x3 Grid
     {
-        "prompt": "When you open the crafting table, you access a ___ x3 grid",
+        "prompt": "When you open the crafting table, you access a _____ x3 grid",
         "answer": "3",
-        "feedback_correct": "Correct! To craft, you arrange ingredients in a 3x3 grid to make many different items",
-        "feedback_incorrect": "Not quite, the crafting table uses a perfect square grid ..."
+        "hint": "The crafting table uses a perfect square grid ...",
+        "feedback_correct": "Correct! To craft, you arrange ingredients in a 3x3 grid to make many different items.",
+        "feedback_incorrect": "Not quite, to craft, you arrange ingredients in a 3x3 grid to make many different items."
     },
 
     # Frame 6: Placement of Redstone Dust
     {
-        "prompt": "The ____ goes in the center of the iron ingots",
+        "prompt": "The _____ goes in the center of the iron ingots",
         "answer": "redstone dust",
-        "feedback_correct": "Correct! The redstone dust goes in the middle of the iron ingots",
-        "feedback_incorrect": "Not quite, what is the other ingredient in the compass?"
+        "hint": "Remember, the ingredients used to craft a compass are iron ingots and a type of dust ...",
+        "feedback_correct": "Correct! The redstone dust goes in the middle of the iron ingots.",
+        "feedback_incorrect": "Not quite, the redstone dust goes in the middle of the iron ingots."
     },
     
     # Frame 7: + Shape
     {
         "prompt": "The 4 iron ingots are arranged in a ____ shape around the redstone dust",
         "answer": "+",
+        "hint": "To add, you use the _____ sign ...",
         "feedback_correct": "Correct! The iron ingots evenly surround the redstone dust on all four sides",
-        "feedback_incorrect": "The iron ingots should be placed in the middle-top, middle-bottom, middle-left, and middle-right slots (forming a + shape)"
+        "feedback_incorrect": "Not quite, the iron ingots should be placed in the middle-top, middle-bottom, middle-left, and middle-right slots (forming a + shape)"
     },
     
     # Frame 8: Collection
     {
-        "prompt": "To collect, you ____ the compass from the result slot to your inventory.",
+        "prompt": "To collect, you _____ the compass from the result slot to your inventory.",
         "answer": "drag",
+        "hint": "If you click and hold down your mouse while moving it, you do what? ...",
         "feedback_correct": "Yes! You drag the compass into your inventory. Now you can use your newly crafted compass!",
-        "feedback_incorrect": "Not quite, if you click and hold down your mouse while moving it, you do what? ..."
+        "feedback_incorrect": "Not quite, you drag the compass into your inventory. Now you can use your newly crafted compass!"
     },
 ]
 
