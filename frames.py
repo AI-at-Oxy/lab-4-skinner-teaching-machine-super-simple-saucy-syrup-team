@@ -54,7 +54,7 @@ Choose a structure and be CONSISTENT across all your frames!
 # =============================================================================
 
 FRAMES = [
-    # Frame 1: Introduction
+    # Frame 1: Ingredients
     {
         "prompt": "In Minecraft, we need _____ and _____ to make a compass.",
         "answers": ["iron ingots", "redstone dust"],
@@ -62,7 +62,7 @@ FRAMES = [
         "feedback_incorrect": "Not quite. You can find both of these ingredients in a cave."
     },
     
-    # Frame 2: Assignment operator
+    # Frame 2: Number of Iron Ingots
     {
         "prompt": "You need ___ iron ingots.",
         "answer": "4",
@@ -70,7 +70,7 @@ FRAMES = [
         "feedback_incorrect": "Not quite. How many sides are in a square?"
     },
     
-    # Frame 3: Simple assignment
+    # Frame 3: Smelting
     {
         "prompt": "To make iron ingots, you ___ the iron ore",
         "answer": "smelt",
@@ -78,7 +78,7 @@ FRAMES = [
         "feedback_incorrect": "Not quite. How do change solid iron into liquid to reshape it?"
     },
     
-    # Frame 4: String variables
+    # Frame 4: Crafting Table
     {
         "prompt": "To build a compass you use a ___ table",
         "answer": "crafting",
@@ -86,7 +86,7 @@ FRAMES = [
         "feedback_incorrect": "Not quite, another word for building is crafting ..."
     },
     
-    # Frame 5: String syntax
+    # Frame 5: 3x3 Grid
     {
         "prompt": "When you open the crafting table, you access a ___ x3 grid",
         "answer": "3",
@@ -94,7 +94,7 @@ FRAMES = [
         "feedback_incorrect": "Not quite, the crafting table uses a perfect square grid ..."
     },
 
-    # Frame 6: String syntax
+    # Frame 6: Placement of Redstone Dust
     {
         "prompt": "The ____ goes in the center of the iron ingots",
         "answer": "redstone dust",
@@ -102,7 +102,7 @@ FRAMES = [
         "feedback_incorrect": "Not quite, what is the other ingredient in the compass?"
     },
     
-    # Frame 7: Case sensitivity
+    # Frame 7: + Shape
     {
         "prompt": "The 4 iron ingots are arranged in a ____ shape around the redstone dust",
         "answer": "+",
@@ -110,7 +110,7 @@ FRAMES = [
         "feedback_incorrect": "The iron ingots should be placed in the middle-top, middle-bottom, middle-left, and middle-right slots (forming a + shape)"
     },
     
-    # Frame 8: Print function
+    # Frame 8: Collection
     {
         "prompt": "To collect, you ____ the compass from the result slot to your inventory.",
         "answer": "drag",
