@@ -74,48 +74,48 @@ FRAMES = [
     {
         "prompt": "To make iron ingots, you ___ the iron ore",
         "answer": "smelt",
-        "feedback_correct": "Correct! You use a ",
-        "feedback_incorrect": "Remember, we use = for assignment. So: x = 5"
+        "feedback_correct": "Correct! You use a furnace to smelt iron ore.",
+        "feedback_incorrect": "Not quite. How do change solid iron into liquid to reshape it?"
     },
     
     # Frame 4: String variables
     {
-        "prompt": "Text data in Python is called a _____.",
-        "answer": "string",
-        "feedback_correct": "Yes! Strings are sequences of characters (text).",
-        "feedback_incorrect": "Text data is called a string."
+        "prompt": "To build a compass you use a ___ table",
+        "answer": "crafting",
+        "feedback_correct": "Yes! A crafting table helps to make many items in Minecraft",
+        "feedback_incorrect": "Not quite, another word for building is crafting ..."
     },
     
     # Frame 5: String syntax
     {
-        "prompt": "Strings must be surrounded by _____ or double quotes.",
-        "answer": "single",
-        "feedback_correct": "Correct! Both 'hello' and \"hello\" are valid strings.",
-        "feedback_incorrect": "Strings use single quotes or double quotes: 'hello' or \"hello\""
+        "prompt": "When you open the crafting table, you access a ___ x3 grid",
+        "answer": "3",
+        "feedback_correct": "Correct! To craft, you arrange ingredients in a 3x3 grid to make many different items",
+        "feedback_incorrect": "Not quite, the crafting table uses a perfect square grid ..."
     },
-    
-    # Frame 6: Naming conventions
+
+    # Frame 6: String syntax
     {
-        "prompt": "Variable names in Python cannot start with a _____.",
-        "answer": "number",
-        "feedback_correct": "Right! Variables can't start with numbers. 'var1' is ok, '1var' is not.",
-        "feedback_incorrect": "Variable names cannot start with a number."
+        "prompt": "The ____ goes in the center of the iron ingots",
+        "answer": "redstone dust",
+        "feedback_correct": "Correct! The redstone dust goes in the middle of the iron ingots",
+        "feedback_incorrect": "Not quite, what is the other ingredient in the compass?"
     },
     
     # Frame 7: Case sensitivity
     {
-        "prompt": "In Python, 'Name' and 'name' are _____ variables. (same/different)",
-        "answer": "different",
-        "feedback_correct": "Correct! Python is case-sensitive.",
-        "feedback_incorrect": "Python is case-sensitive, so Name and name are different."
+        "prompt": "The 4 iron ingots are arranged in a ____ shape around the redstone dust",
+        "answer": "+",
+        "feedback_correct": "Correct! The iron ingots evenly surround the redstone dust on all four sides",
+        "feedback_incorrect": "The iron ingots should be placed in the middle-top, middle-bottom, middle-left, and middle-right slots (forming a + shape)"
     },
     
     # Frame 8: Print function
     {
-        "prompt": "To display a variable's value, we use the _____ function.",
-        "answer": "print",
-        "feedback_correct": "Yes! print(x) displays the value of x.",
-        "feedback_incorrect": "We use the print() function to display values."
+        "prompt": "To collect, you ____ the compass from the result slot to your inventory.",
+        "answer": "drag",
+        "feedback_correct": "Yes! You drag the compass into your inventory. Now you can use your newly crafted compass!",
+        "feedback_incorrect": "Not quite, if you click and hold down your mouse while moving it, you do what? ..."
     },
 ]
 
