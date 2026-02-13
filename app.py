@@ -68,7 +68,7 @@ def submit_answer():
     frame = FRAMES[frame_idx]
     
     # Get and normalize the user's answer
-    user_answer = request.form.get("answer", "").strip().lower()
+    user_answer = request.form.get("answer", "").strip() # multiple answers accounts for lowercase/uppercase already
     
     # Get and normalize the correct answer
     # TODO: If you implement multiple acceptable answers, modify this logic
