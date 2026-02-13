@@ -92,8 +92,8 @@ FRAMES = [
     # Frame 4: Crafting Table
     {
         "prompt": "To build a compass you use a _____ table",
-        "answer": "crafting",
-        "hint": "Another word for building is ... (its also in the name Minecraft!)",
+        "answers": ["crafting", "Crafting", "CRAFTING"],
+        "hint": "Another word for building is ... (its also one of the words in Minecraft!)",
         "feedback_correct": "Yes! A crafting table helps to make many items in Minecraft",
         "feedback_incorrect": "Not quite, A crafting table helps to make many items in Minecraft."
     },
@@ -101,7 +101,7 @@ FRAMES = [
     # Frame 5: 3x3 Grid
     {
         "prompt": "When you open the crafting table, you access a _____ x3 grid",
-        "answer": "3",
+        "answers": ["3", "three", "Three", "THREE", "III"],
         "hint": "The crafting table uses a perfect square grid ...",
         "feedback_correct": "Correct! To craft, you arrange ingredients in a 3x3 grid to make many different items.",
         "feedback_incorrect": "Not quite, to craft, you arrange ingredients in a 3x3 grid to make many different items."
