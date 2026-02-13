@@ -68,14 +68,13 @@ def submit_answer():
     frame = FRAMES[frame_idx]
     
     # Get and normalize the user's answer
-    user_answer = request.form.get("answer", "").strip().lower()
+    user_answer = request.form.get("answer", "").strip() # multiple answers accounts for lowercase/uppercase already
     
-    # Get and normalize the correct answer
-    # TODO: If you implement multiple acceptable answers, modify this logic
-    correct_answer = frame["answer"].strip().lower()
+    correct_answers = frame["answers"]
+    correct_answer_display = correct_answers[0]
     
-    # Check if correct
-    is_correct = (user_answer == correct_answer)
+    is_correct = user_answer in correct_answers
+
     
     if is_correct:
         # Update score and advance to next frame
@@ -92,7 +91,8 @@ def submit_answer():
         "feedback.html",
         is_correct=is_correct,
         feedback=feedback,
-        frame=frame
+        frame=frame,
+        correct_answer=correct_answer_display
     )
 
 
