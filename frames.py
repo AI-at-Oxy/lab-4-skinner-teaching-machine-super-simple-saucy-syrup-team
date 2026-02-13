@@ -54,17 +54,37 @@ Choose a structure and be CONSISTENT across all your frames!
 # =============================================================================
 
 FRAMES = [
-    # Frame 1: Ingredients
+    # Frame 1: Ingredients #FIXME make it so that you can fill in two blanks or only one answer works for one and two
     {
-        "prompt": "In Minecraft, we need _____ and _____ to make a compass.",
+        "prompt": "In Minecraft, we need two ingredients to make a compass. The first is _____.",
+        "answers": ["iron ingots", "redstone dust"],
+        "hint": "You can find either ingredient in a cave ...",
+        "feedback_correct": "Correct! You need iron ingots.",
+        "feedback_incorrect": "Not quite. You can find both of these ingredients in a cave."
+    },
+    # Frame 1.5: Ingredients 2
+    {
+        "prompt": "The second ingredient is _____.",
         "answers": ["iron ingots", "redstone dust"],
         "feedback_correct": "Correct! You need iron ingots and redstone dust.",
         "feedback_incorrect": "Not quite. You can find both of these ingredients in a cave."
     },
+
+    """
+    frame = {
+    "prompt": "What keyword defines a function in Python?",
+    "answer": "def",
+    "answers": ["def"],  # List for multiple acceptable answers
+    "hint": "It's a 3-letter word.",
+    "feedback_correct": "Yes! 'def' is used to define functions.",
+    "feedback_incorrect": "Not quite. We use 'def' to define functions.",
+    "topic": "python-functions"
+    }
+    """
     
     # Frame 2: Number of Iron Ingots
     {
-        "prompt": "You need ___ iron ingots.",
+        "prompt": "You need _____ iron ingots.",
         "answer": "4",
         "feedback_correct": "Yes! You need 4 iron ingots.",
         "feedback_incorrect": "Not quite. How many sides are in a square?"
@@ -72,7 +92,7 @@ FRAMES = [
     
     # Frame 3: Smelting
     {
-        "prompt": "To make iron ingots, you ___ the iron ore",
+        "prompt": "To make iron ingots, you _____ the iron ore",
         "answer": "smelt",
         "feedback_correct": "Correct! You use a furnace to smelt iron ore.",
         "feedback_incorrect": "Not quite. How do change solid iron into liquid to reshape it?"
