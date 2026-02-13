@@ -70,18 +70,11 @@ def submit_answer():
     # Get and normalize the user's answer
     user_answer = request.form.get("answer", "").strip() # multiple answers accounts for lowercase/uppercase already
     
-    # Get and normalize the correct answer
-    if "answers" in frame:
-        correct_answer = frame["answer"]
-        correct_answer_display = correct_answers[0]
-    else:
-        correct_answers = [frame["answer"]]
-        correct_answer_display = frame["answer"]
+    correct_answers = frame["answers"]
+    correct_answer_display = correct_answers[0]
     
     is_correct = user_answer in correct_answers
-    
-    # Check if correct
-    is_correct = (user_answer == correct_answer)
+
     
     if is_correct:
         # Update score and advance to next frame
