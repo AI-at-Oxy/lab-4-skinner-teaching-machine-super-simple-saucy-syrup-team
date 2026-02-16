@@ -30,6 +30,7 @@ def index():
     # Initialize/reset session variables
     session["current_frame"] = 0
     session["score"] = 0
+    session["attempts"] = 0
     
     return render_template("index.html", total_frames=len(FRAMES))
 
@@ -79,7 +80,7 @@ def submit_answer():
         feedback = frame.get("feedback_incorrect", "Not quite.")
 
     return render_template(
-        "feedback.html",
+        "attempts.html",
         is_correct=is_correct,
         feedback=feedback,
         frame=frame,
@@ -124,4 +125,4 @@ def complete():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=5050)
