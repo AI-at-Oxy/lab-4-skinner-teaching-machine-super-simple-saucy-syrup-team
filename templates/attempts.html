@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Progress -->
+<p class="progress">Frame {{ frame_num }} of {{ total }}</p>
+
+<div class="prompt">
+    {{ frame.prompt }}
+</div>
+
+{% if is_correct %}
+
+<div class="feedback-box success">
+    <h2 class="correct">✓ Correct!</h2>
+    <p>{{ feedback }}</p>
+</div>
+
+<a href="{{ url_for('show_frame') }}" class="button">Next Frame →</a>
+
+{% else %}
+
+<div class="feedback-box error">
+    <h2 class="incorrect">✗ Not quite...</h2>
+    <p>{{ feedback }}</p>
+    <p><strong>Attempt {{ attempts }} of 3</strong></p>
+</div>
+
+{% if attempts < 3 %}
+
+<!-- Show form again -->
+<form action="{{ url_for('submit_answer') }}" method="POST">
+    <input 
+        type="text" 
+        name="answer" 
+        placeholder="Try again..." 
+        autofocus 
+        autocomplete="off"
+        required
+    >
+    <br>
+    <button type="submit">Submit Answer</button>
+</form>
+
+{% else %}
+
+<!-- Reveal answer after 3 tries -->
+<div class="feedback-box error">
+    <p><strong>The correct answer was:</strong> {{ frame.answers[0] }}</p>
+</div>
+
+<a href="{{ url_for('show_frame') }}" class="button">Next Frame →</a>
+
+{% endif %}
+
+{% endif %}
+
+{% endblock %}
