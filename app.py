@@ -30,6 +30,7 @@ def index():
     # Initialize/reset session variables
     session["current_frame"] = 0
     session["score"] = 0
+    session["attempts"] = {}
     
     return render_template("index.html", total_frames=len(FRAMES))
 
@@ -48,11 +49,24 @@ def show_frame():
     
     frame = FRAMES[frame_idx]
     
+    # Get attempt information for this frame
+    if "attempts" not in session:
+        session["attempts"] = {}
+    
+    frame_key = str(frame_idx)  # Convert to string for JSON serialization
+    if frame_key not in session["attempts"]:
+        session["attempts"][frame_key] = 0
+    
+    current_attempts = session["attempts"][frame_key]
+    attempts_remaining = max(0, 3 - current_attempts)
+    
     return render_template(
         "frame.html",
         frame=frame,
         frame_num=frame_idx + 1,
-        total=len(FRAMES)
+        total=len(FRAMES),
+        current_attempts=current_attempts,
+        attempts_remaining=attempts_remaining
     )
 
 
@@ -61,38 +75,62 @@ def submit_answer():
     """
     Process the student's answer:
     - Compare to correct answer (case-insensitive, stripped)
+    - Track attempts (max 3 before showing hint)
     - Update score and progress if correct
     - Display appropriate feedback
     """
     frame_idx = session.get("current_frame", 0)
     frame = FRAMES[frame_idx]
     
+    # Initialize attempts tracking for this frame
+    if "attempts" not in session:
+        session["attempts"] = {}
+    
+    frame_key = str(frame_idx)  # Convert to string for JSON serialization
+    if frame_key not in session["attempts"]:
+        session["attempts"][frame_key] = 0
+    
     # Get and normalize the user's answer
-    user_answer = request.form.get("answer", "").strip() # multiple answers accounts for lowercase/uppercase already
+    user_answer = request.form.get("answer", "").strip()
     
     correct_answers = frame["answers"]
     correct_answer_display = correct_answers[0]
     
     is_correct = user_answer in correct_answers
-
+    
+    # Increment attempt counter on wrong answer
+    if not is_correct:
+        session["attempts"][frame_key] += 1
+        session.modified = True  # Force Flask to persist the session change
+    
+    current_attempts = session["attempts"][frame_key]
+    attempts_remaining = max(0, 3 - current_attempts)
+    show_hint = attempts_remaining == 1  # Show hint when 1 attempt left
+    show_answer = attempts_remaining == 0  # Show answer when out of attempts
     
     if is_correct:
-        # Update score and advance to next frame
+        # Correct! Update score and advance to next frame
         session["score"] = session.get("score", 0) + 1
         session["current_frame"] = frame_idx + 1
-    
-    # Get feedback message (with fallback defaults)
-    if is_correct:
+        session.modified = True
         feedback = frame.get("feedback_correct", "Correct! Well done.")
     else:
+        # Wrong answer
         feedback = frame.get("feedback_incorrect", "Not quite. Try again!")
+    
+    hint = frame.get("hint", "No hint available.")
     
     return render_template(
         "feedback.html",
         is_correct=is_correct,
         feedback=feedback,
         frame=frame,
-        correct_answer=correct_answer_display
+        correct_answer=correct_answer_display,
+        current_attempts=current_attempts,
+        attempts_remaining=attempts_remaining,
+        show_hint=show_hint,
+        show_answer=show_answer,
+        hint=hint
     )
 
 
