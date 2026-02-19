@@ -53,12 +53,14 @@ Choose a structure and be CONSISTENT across all your frames!
 # Replace these with your own topic!
 # =============================================================================
 
+# mel user tested! 2/18/26
+
 FRAMES = [
     # Frame 1: Ingredients: Iron
     {
         "prompt": "In Minecraft, we need two ingredients to craft a compass. One is _____ ingots.",
         "answers": ["iron", "Iron", "IRON"],
-        "hint": "This is one of the most common metals on Earth!",
+        "hint": "This is one of the most common metals on Earth!", # hints feature, hints for all frames
         "feedback_correct": "Correct! You need iron ingots and one more ingredient.",
         "feedback_incorrect": "Not quite. Try again!"
     },
@@ -109,7 +111,7 @@ FRAMES = [
 
     # Frame 6: Placement of Redstone Dust
     {
-        "prompt": "The _____ goes in the center of the iron ingots",
+        "prompt": "The _____ goes in the center of the iron ingots", # building on previous answers! this requires knowing ingredients from first couple questions
         "answers": ["redstone dust", "Redstone dust", "Redstone Dust", "REDSTONE DUST", "red stone dust", "Red Stone Dust", "RED STONE DUST", "redstone", "Redstone", "REDSTONE", "red stone", "Red stone", "Red Stone", "RED STONE"],
         "hint": "Remember, the ingredients used to craft a compass are iron ingots and a type of dust ...",
         "feedback_correct": "Correct! The redstone dust goes in the middle of the iron ingots.",
@@ -119,7 +121,7 @@ FRAMES = [
     # Frame 7: + Shape
     {
         "prompt": "The 4 iron ingots are arranged in a ____ shape around the redstone dust",
-        "answers": ["+", "plus", "Plus", "PLUS", "cross", "Cross", "CROSS"],
+        "answers": ["+", "plus", "Plus", "PLUS", "cross", "Cross", "CROSS"], # accepts all answers, made modifications to normalization
         "hint": "To add, you use the _____ sign (also known as a cross)...",
         "feedback_correct": "Correct! The iron ingots evenly surround the redstone dust on all four sides",
         "feedback_incorrect": "Not quite. Try again!"
