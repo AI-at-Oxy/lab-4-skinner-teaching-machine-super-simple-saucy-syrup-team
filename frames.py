@@ -53,69 +53,87 @@ Choose a structure and be CONSISTENT across all your frames!
 # Replace these with your own topic!
 # =============================================================================
 
+# mel user tested! 2/18/26
+
 FRAMES = [
-    # Frame 1: Introduction
+    # Frame 1: Ingredients: Iron
     {
-        "prompt": "In Python, we store data in _____. (Hint: they can vary!)",
-        "answer": "variables",
-        "feedback_correct": "Correct! Variables are containers for storing data.",
-        "feedback_incorrect": "Not quite. We store data in variables."
+        "prompt": "In Minecraft, we need two ingredients to craft a compass. One is _____ ingots.",
+        "answers": ["iron", "Iron", "IRON"],
+        "hint": "This is one of the most common metals on Earth!", # hints feature, hints for all frames
+        "feedback_correct": "Correct! You need iron ingots and one more ingredient.",
+        "feedback_incorrect": "Not quite. Try again!"
+    },
+    # Frame 1.5: Ingredients: Redstone
+    {
+        "prompt": "The second ingredient is _____ dust.",
+        "answers": ["redstone", "Redstone", "REDSTONE", "red stone", "Red stone", "Red Stone", "RED STONE"],
+        "hint": "it's red ...",
+        "feedback_correct": "Correct! You need iron ingots and redstone dust.",
+        "feedback_incorrect": "Not quite. Try again!"
     },
     
-    # Frame 2: Assignment operator
+    # Frame 2: Number of Iron Ingots
     {
-        "prompt": "To assign a value to a variable, we use the _____ sign.",
-        "answer": "=",
-        "feedback_correct": "Yes! The = sign is the assignment operator.",
-        "feedback_incorrect": "Not quite. We use the = (equals) sign."
+        "prompt": "Let's talk numbers ... You need _____ iron ingots.",
+        "answers": ["4", "four", "Four", "FOUR", "IV"], # never forget roman numerals
+        "hint": "It is an even number ...",
+        "feedback_correct": "Yes! You need 4 iron ingots.",
+        "feedback_incorrect": "Not quite. Try again!"
     },
     
-    # Frame 3: Simple assignment
+    # Frame 3: Smelting
     {
-        "prompt": "To store the number 5 in a variable called x, we write: x _____ 5",
-        "answer": "=",
-        "feedback_correct": "Correct! x = 5 assigns the value 5 to x.",
-        "feedback_incorrect": "Remember, we use = for assignment. So: x = 5"
+        "prompt": "To make iron ingots, you _____ the iron ore",
+        "answers": ["smelt", "Smelt", "SMELT"],
+        "hint": "This is the process of extracting a metal from its ore by melting it ... it is also the past tense of 'smell'",
+        "feedback_correct": "Correct! You use a furnace to smelt iron ore.",
+        "feedback_incorrect": "Not quite. Try again!"
     },
     
-    # Frame 4: String variables
+    # Frame 4: Crafting Table
     {
-        "prompt": "Text data in Python is called a _____.",
-        "answer": "string",
-        "feedback_correct": "Yes! Strings are sequences of characters (text).",
-        "feedback_incorrect": "Text data is called a string."
+        "prompt": "To build a compass you use a _____ table",
+        "answers": ["crafting", "Crafting", "CRAFTING"],
+        "hint": "Another word for building is ... (its also one of the words in Minecraft!)",
+        "feedback_correct": "Yes! A crafting table helps to make many items in Minecraft",
+        "feedback_incorrect": "Not quite. Try again!"
     },
     
-    # Frame 5: String syntax
+    # Frame 5: 3x3 Grid
     {
-        "prompt": "Strings must be surrounded by _____ or double quotes.",
-        "answer": "single",
-        "feedback_correct": "Correct! Both 'hello' and \"hello\" are valid strings.",
-        "feedback_incorrect": "Strings use single quotes or double quotes: 'hello' or \"hello\""
+        "prompt": "When you open the crafting table, you access a _____ x3 grid",
+        "answers": ["3", "three", "Three", "THREE", "III"],
+        "hint": "The crafting table uses a perfect square grid ...",
+        "feedback_correct": "Correct! To craft, you arrange ingredients in a 3x3 grid to make many different items.",
+        "feedback_incorrect": "Not quite. Try again!"
+    },
+
+    # Frame 6: Placement of Redstone Dust
+    {
+        "prompt": "The _____ goes in the center of the iron ingots", # building on previous answers! this requires knowing ingredients from first couple questions
+        "answers": ["redstone dust", "Redstone dust", "Redstone Dust", "REDSTONE DUST", "red stone dust", "Red Stone Dust", "RED STONE DUST", "redstone", "Redstone", "REDSTONE", "red stone", "Red stone", "Red Stone", "RED STONE"],
+        "hint": "Remember, the ingredients used to craft a compass are iron ingots and a type of dust ...",
+        "feedback_correct": "Correct! The redstone dust goes in the middle of the iron ingots.",
+        "feedback_incorrect": "Not quite. Try again!"
     },
     
-    # Frame 6: Naming conventions
+    # Frame 7: + Shape
     {
-        "prompt": "Variable names in Python cannot start with a _____.",
-        "answer": "number",
-        "feedback_correct": "Right! Variables can't start with numbers. 'var1' is ok, '1var' is not.",
-        "feedback_incorrect": "Variable names cannot start with a number."
+        "prompt": "The 4 iron ingots are arranged in a ____ shape around the redstone dust",
+        "answers": ["+", "plus", "Plus", "PLUS", "cross", "Cross", "CROSS"], # accepts all answers, made modifications to normalization
+        "hint": "To add, you use the _____ sign (also known as a cross)...",
+        "feedback_correct": "Correct! The iron ingots evenly surround the redstone dust on all four sides",
+        "feedback_incorrect": "Not quite. Try again!"
     },
     
-    # Frame 7: Case sensitivity
+    # Frame 8: Collection
     {
-        "prompt": "In Python, 'Name' and 'name' are _____ variables. (same/different)",
-        "answer": "different",
-        "feedback_correct": "Correct! Python is case-sensitive.",
-        "feedback_incorrect": "Python is case-sensitive, so Name and name are different."
-    },
-    
-    # Frame 8: Print function
-    {
-        "prompt": "To display a variable's value, we use the _____ function.",
-        "answer": "print",
-        "feedback_correct": "Yes! print(x) displays the value of x.",
-        "feedback_incorrect": "We use the print() function to display values."
+        "prompt": "To collect, you click and _____ the compass from the result slot to your inventory.",
+        "answers": ["drag", "Drag", "DRAG"],
+        "hint": "If you click and hold down your mouse while moving it, you do what? ...",
+        "feedback_correct": "Yes! You drag the compass into your inventory. Now you can use your newly crafted compass!",
+        "feedback_incorrect": "Not quite. Try again!"
     },
 ]
 

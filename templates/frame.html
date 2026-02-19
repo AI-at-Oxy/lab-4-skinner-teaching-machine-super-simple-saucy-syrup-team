@@ -7,6 +7,13 @@
     <div class="progress-bar-fill" style="width: {{ (frame_num - 1) / total * 100 }}%"></div>
 </div>
 
+<!-- Attempts remaining (if tracking is active) -->
+{% if current_attempts is defined %}
+<div style="text-align: center; margin: 15px 0; color: #666; font-size: 0.95em;">
+    Attempts remaining: <strong>{{ attempts_remaining }}</strong>/3
+</div>
+{% endif %}
+
 <!-- The prompt/question -->
 <div class="prompt">
     {{ frame.prompt }}

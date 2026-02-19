@@ -16,29 +16,36 @@
 <div class="feedback-box error">
     <h2 class="incorrect">✗ Not quite...</h2>
     <p>{{ feedback }}</p>
-    <p style="margin-top: 15px;">
-        <strong>The correct answer was:</strong> {{ frame.answer }}
+    
+    {% if show_hint %}
+    <!-- Show hint when 1 attempt remains, or hint + answer when out of attempts -->
+    <div style="margin-top: 20px; padding: 15px; background: #fff9e6; border-radius: 5px; border-left: 4px solid #f39c12;">
+        <p><strong>💡 Here's a hint:</strong></p>
+        <p style="margin: 10px 0 0 0;">{{ hint }}</p>
+        
+        {% if show_answer %}
+        <!-- Show correct answer only after all attempts exhausted -->
+        <p style="margin-top: 15px;">
+            <strong>The correct answer is:</strong> {{ correct_answer }}
+        </p>
+        {% endif %}
+    </div>
+    {% else %}
+    <!-- Still have attempts remaining -->
+    <p style="margin-top: 15px; color: #e74c3c; font-weight: bold;">
+        Attempts remaining: {{ attempts_remaining }}/3
     </p>
+    {% endif %}
 </div>
 
-<!-- 
-    DESIGN CHOICE: What happens after an incorrect answer?
-    
-    Option A (current): Advance to next frame anyway
-    Option B: Stay on same frame until correct (uncomment below)
-    
-    Skinner's original machines used Option B.
-    Modify based on your pedagogical goals!
--->
-
-<!-- Option A: Advance anyway (current behavior) -->
+<!-- Navigation buttons -->
+{% if show_answer %}
+<!-- Out of attempts - must move to next frame -->
 <a href="{{ url_for('show_frame') }}" class="button">Continue to Next Frame →</a>
-
-<!-- Option B: Retry same frame (uncomment to use)
-<p style="margin-top: 15px;">
-    <a href="{{ url_for('show_frame') }}" class="button">Try Again</a>
-</p>
--->
+{% else %}
+<!-- Still have attempts - try again -->
+<a href="{{ url_for('show_frame') }}" class="button">Try Again</a>
+{% endif %}
 
 {% endif %}
 
